@@ -416,6 +416,19 @@ function render(){
   if(view==='dashboard') renderDashboard();
   else renderStage();
 }
+// Expose functions and state to global scope (needed for onclick handlers in module script)
+window.dashOpen = dashOpen;
+window.openReminders = openReminders;
+window.comments = comments;
+window.render = render;
+window.approveEmail = approveEmail;
+window.unapproveEmail = unapproveEmail;
+window.saveComment = saveComment;
+window.sendSummary = sendSummary;
+window.checkAndGoNext = checkAndGoNext;
+Object.defineProperty(window, 'current', { get: ()=>current, set: v=>{ current=v; } });
+Object.defineProperty(window, 'activeTab', { get: ()=>activeTab, set: v=>{ activeTab=v; } });
+Object.defineProperty(window, 'view', { get: ()=>view, set: v=>{ view=v; } });
 render();
 </script>
 </body>
