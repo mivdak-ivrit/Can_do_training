@@ -50,25 +50,25 @@ body{font-family:Arial,sans-serif;background:#f4f5f7;min-height:100vh;direction:
 .date-item strong{color:#0E7C7B;}
 .dates-note{font-size:12px;color:#9ca3af;border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;}
 .pay-btn{display:inline-block;padding:9px 20px;background:#0E7C7B;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;margin-top:10px;}
-.action-area{margin-top:12px;}
-.action-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;direction:rtl;margin-bottom:8px;}
-.approve-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:8px;background:#0E7C7B;color:#fff;font-size:13px;font-weight:600;border:none;cursor:pointer;}
-.approve-btn:hover{background:#0a6665;}
-.approve-btn.approved{background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;cursor:default;}
-.unapprove-btn{padding:6px 12px;border-radius:8px;border:1px solid #d1d5db;background:none;color:#9ca3af;font-size:12px;cursor:pointer;}
-.unapprove-btn:hover{background:#f3f4f6;}
-.warn-msg{font-size:12px;color:#991b1b;background:#fee2e2;padding:6px 12px;border-radius:8px;display:none;}
-.comment-box{border:1px solid #fcd34d;border-radius:10px;overflow:hidden;background:#fff;}
-.comment-hdr{padding:9px 14px;background:#fef3c7;display:flex;align-items:center;gap:7px;direction:rtl;}
-.comment-hdr i{color:#92400e;font-size:15px;}
-.comment-hdr-lbl{font-size:12px;font-weight:600;color:#92400e;}
-.comment-saved-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:6px;background:#92400e;color:#fff;font-size:11px;margin-right:auto;}
-textarea.comment-ta{width:100%;padding:12px 14px;border:none;background:#fff;color:#1f2937;font-size:13px;line-height:1.7;resize:vertical;min-height:68px;direction:rtl;text-align:right;font-family:Arial,sans-serif;}
-textarea.comment-ta:focus{outline:none;background:#fffbeb;}
-.comment-ft{padding:7px 14px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #fde68a;direction:rtl;}
-.comment-cnt{font-size:11px;color:#9ca3af;}
-.comment-save-btn{padding:5px 13px;border-radius:7px;background:#0E7C7B;color:#fff;font-size:12px;border:none;cursor:pointer;}
-.comment-saved-note{font-size:11px;color:#065f46;display:none;align-items:center;gap:4px;}
+.progress-bar{height:3px;background:#e5e7eb;border-radius:2px;margin-bottom:1.25rem;overflow:hidden;}
+.progress-fill{height:100%;background:#0E7C7B;border-radius:2px;transition:width 0.3s;}
+.nav-footer{display:flex;justify-content:space-between;margin-top:1.5rem;}
+.nav-btn{padding:8px 18px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#6b7280;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;}
+.nav-btn:hover{background:#f3f4f6;}
+.nav-btn.primary{background:#0E7C7B;color:#fff;border-color:#0E7C7B;}
+.nav-btn.primary:hover{background:#0a6665;}
+.action-area{margin-top:10px;display:flex;flex-direction:column;gap:8px;}
+.action-toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;direction:rtl;}
+.tool-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:8px;border:1px solid #d1d5db;background:#fff;color:#374151;font-size:12px;font-weight:500;cursor:pointer;transition:all 0.15s;}
+.tool-btn:hover{background:#f3f4f6;border-color:#9ca3af;}
+.tool-btn.save-btn{background:#0E7C7B;color:#fff;border-color:#0E7C7B;}
+.tool-btn.save-btn:hover{background:#0a6665;}
+.tool-btn.reset-btn{color:#991b1b;border-color:#fca5a5;}
+.checks-row{display:flex;gap:16px;direction:rtl;align-items:center;padding:8px 12px;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;}
+.check-label{display:flex;align-items:center;gap:6px;font-size:13px;color:#374151;cursor:pointer;user-select:none;}
+.check-label input[type=checkbox]{width:15px;height:15px;accent-color:#0E7C7B;cursor:pointer;}
+.email-editor{width:100%;min-height:220px;padding:22px;border:2px solid #fcd34d;border-radius:0 0 12px 12px;font-size:14px;line-height:1.8;color:#1f2937;direction:rtl;text-align:right;font-family:Arial,sans-serif;resize:vertical;background:#fffbeb;}
+.email-editor:focus{outline:none;}
 .reminder-list{display:flex;flex-direction:column;gap:8px;margin-top:1rem;}
 .reminder-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;}
 .reminder-toggle{width:100%;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;background:none;border:none;font-size:13px;font-weight:500;color:#1f2937;direction:rtl;text-align:right;}
@@ -80,21 +80,8 @@ textarea.comment-ta:focus{outline:none;background:#fffbeb;}
 .reminder-body p:last-child{margin-bottom:0;}
 .rtag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;margin-left:7px;}
 .tag-info{background:#d1fae5;color:#065f46;}.tag-warn{background:#fef3c7;color:#92400e;}.tag-urgent{background:#fee2e2;color:#991b1b;}
-.progress-bar{height:3px;background:#e5e7eb;border-radius:2px;margin-bottom:1.25rem;overflow:hidden;}
-.progress-fill{height:100%;background:#0E7C7B;border-radius:2px;transition:width 0.3s;}
-.nav-footer{display:flex;justify-content:space-between;margin-top:1.5rem;}
-.nav-btn{padding:8px 18px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#6b7280;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;}
-.nav-btn:hover{background:#f3f4f6;}
-.nav-btn.primary{background:#0E7C7B;color:#fff;border-color:#0E7C7B;}
-.nav-btn.primary:hover{background:#0a6665;}
-/* DASHBOARD */
 .dash-title{font-size:20px;font-weight:700;color:#111827;margin-bottom:4px;}
 .dash-sub{font-size:13px;color:#6b7280;margin-bottom:1.25rem;}
-.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.5rem;}
-.stat-card{background:#fff;border-radius:8px;padding:14px;text-align:center;border:1px solid #e5e7eb;}
-.stat-num{font-size:26px;font-weight:700;}
-.stat-lbl{font-size:12px;color:#6b7280;margin-top:2px;}
-.sc-green .stat-num{color:#065f46;}.sc-amber .stat-num{color:#92400e;}.sc-red .stat-num{color:#991b1b;}
 .dash-list{display:flex;flex-direction:column;gap:8px;}
 .dash-card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;}
 .dash-card-hdr{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;cursor:pointer;}
@@ -103,71 +90,39 @@ textarea.comment-ta:focus{outline:none;background:#fffbeb;}
 .dash-name{font-size:14px;font-weight:600;color:#111827;}
 .pills{display:flex;gap:5px;flex-wrap:wrap;}
 .pill{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500;}
-.pill-ok{background:#d1fae5;color:#065f46;}.pill-cmt{background:#fef3c7;color:#92400e;}.pill-pend{background:#f3f4f6;color:#9ca3af;border:1px solid #e5e7eb;}
+.pill-full{background:#d1fae5;color:#065f46;}.pill-part{background:#e0f2fe;color:#0369a1;}.pill-pend{background:#f3f4f6;color:#9ca3af;border:1px solid #e5e7eb;}
 .dash-card-body{padding:0 16px 12px;display:none;}
 .dash-card-body.open{display:block;}
 .dash-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-top:1px solid #f3f4f6;font-size:13px;color:#6b7280;}
 .dash-row:first-child{border-top:none;}
-.dash-go{padding:4px 12px;border-radius:7px;background:#0E7C7B;color:#fff;font-size:11px;border:none;cursor:pointer;}
-.dash-done{padding:10px;background:#065f46;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;width:100%;margin-top:1.25rem;display:flex;align-items:center;justify-content:center;gap:7px;}
-.dash-pending-note{text-align:center;font-size:12px;color:#9ca3af;margin-top:1rem;padding:10px;background:#f9fafb;border-radius:8px;}
+.dash-go{padding:4px 12px;border-radius:7px;background:#0E7C7B;color:#fff;font-size:11px;border:none;cursor:pointer;cursor:pointer;}
+.dash-go:hover{background:#0a6665;}
 </style>
 </head>
 <body>
 <div class="wrap" id="app"></div>
-<!-- Firebase SDK -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, ref, set, onValue, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-const firebaseConfig = {
-  databaseURL: "https://can-do-workflow-default-rtdb.europe-west1.firebasedatabase.app/"
+<!-- Non-module script: all globals live here -->
+<script>
+// ── App state (all on window so inline onclick can reach them) ──
+window._state = {
+  edits: {},
+  checks: {},
+  openReminders: {},
+  dashOpen: {},
+  view: 'dashboard',
+  current: 0,
+  activeTab: '',
+  editingKey: null
 };
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-const dataRef = ref(db, 'workflow');
 
-// State
-const comments={};
-const approvals={};
-const openReminders={};
-const dashOpen={};
-let view='dashboard',current=0,activeTab='';
-let syncing=false;
-
-// Listen to Firebase changes in real time
-onValue(dataRef, (snapshot) => {
-  const data = snapshot.val() || {};
-  // Update local state from Firebase
-  Object.keys(comments).forEach(k=>delete comments[k]);
-  Object.keys(approvals).forEach(k=>delete approvals[k]);
-  if(data.comments) Object.assign(comments, data.comments);
-  if(data.approvals) Object.assign(approvals, data.approvals);
-  render();
-  // Show sync indicator
-  showSyncIndicator();
-});
-
-function saveToFirebase(){
-  set(dataRef, {
-    comments: {...comments},
-    approvals: {...approvals},
-    lastUpdated: new Date().toISOString()
-  });
-}
-
-function showSyncIndicator(){
-  const el = document.getElementById('sync-indicator');
-  if(el){ el.style.opacity='1'; setTimeout(()=>{ if(el) el.style.opacity='0'; },1500); }
-}
-
-const stages=[
+window._stages = [
   {num:1,title:"רישום ראשוני",desc:"70 נרשמו · מייל אוטומטי לכולם · 15 לא רלוונטיים מקבלים מייל ידני",tabs:['auto','no'],
-    auto:{subject:"תודה רבה על התעניינותכם בהכשרת המנחים של Do.ability ושפה1",body:`<p>תודה רבה על התעניינותכם בהכשרת המנחים של Do.ability ושפה1 מטעם משרד העבודה והג'וינט.</p><p>נתוניך התקבלו במערכת. בימים הקרובים תקבלו הודעה בנוגע להמשך התהליך.</p><div class="email-hl">** מכיוון שמספר המקומות בכל הכשרה מוגבל, ייעשה תעדוף לטובת מועמדים עם פוטנציאל להשתלב בפיתוח והובלת תהליכים לטווח הארוך.</div><p>בכל שאלה ועניין: <strong style="color:#0E7C7B;">can_do@safa1.co.il</strong></p><p>אם טרם הצטרפתם לקהילת הווטסאפ שלנו, מוזמנים להצטרף <strong style="color:#0E7C7B;">כאן</strong>!</p><p class="email-sig">נהיה בקשר בהקדם,<br>צוות שפה 1 וצוות Do.ability</p>`},
-    no:{subject:"לגבי הרישום שלכם – הכשרת מנחים",body:`<p>שלום ותודה לך על התעניינותך בהכשרת המנחים בגישת המסוגלות.</p><p>ההכשרה הנוכחית מסובסדת ע"י משרד העבודה ומיועדת למורים העוסקים בהכוון תעסוקתי בחברה הערבית.</p><p>בשל כך, ההשתתפות במחזור זה רלוונטית למועמדים הזכאים בהתאם למדיניות משרד העבודה.</p><p>נשמח לעדכן אותך בהמשך לגבי הכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות ההכשרה ושפה אחת</p>`},
+    auto:{subject:"תודה רבה על התעניינותכם בהכשרת המנחים של Do.ability ושפה1",body:`<p>תודה רבה על התעניינותכם בהכשרת המנחים של Do.ability ושפה1 מטעם משרד העבודה והג'וינט.</p><p>נתוניך התקבלו במערכת.</p><div class="email-hl">מכיוון שמספר המקומות בכל הכשרה מוגבל, ייעשה תעדוף לטובת מועמדים עם פוטנציאל להשתלב בפיתוח והובלת תהליכים לטווח הארוך.</div><p>בכל שאלה ועניין: <strong style="color:#0E7C7B;">can_do@safa1.co.il</strong></p><p>אם טרם הצטרפתם לקהילת הווטסאפ שלנו, מוזמנים להצטרף <strong style="color:#0E7C7B;">כאן</strong>!</p><p class="email-sig">נהיה בקשר בהקדם,<br>צוות שפה 1 וצוות Do.ability</p>`},
+    no:{subject:"לגבי הרישום שלכם – הכשרת מנחים",body:`<p>שלום ותודה לך על התעניינותך בהכשרת המנחים בגישת המסוגלות.</p><p>לאור הקריטריונים שהוגדרו להכשרת מנחים עבור גישת המסוגלות בהכנה לתעסוקה בחברה הערבית לא נמצאת זכאי להכשרה מקצועית על חשבון משרד העבודה</p><p>בשל כך, ההשתתפות במחזור זה רלוונטית למועמדים הזכאים בהתאם למדיניות משרד העבודה.</p><p>נשמח לעדכן אותך בהמשך לגבי הכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות ההכשרה ושפה אחת</p>`},
     reminders:null},
   {num:2,title:"משימת השתלבות",desc:"55 רלוונטיים · 32 הגישו, 23 לא הגישו · 4 תזכורות עד 14.6",tabs:['yes','no'],
-    yes:{subject:"הכשרת מסוגלות 2026 – יצאתם לדרך, הנה השלב הראשון",body:`<p>שלום,</p><p>תודה שנרשמתם! השלב הראשון הוא משימת פתיחה קצרה במערכת <strong style="color:#0E7C7B;">Canbee</strong>.</p><p>שלחנו מייל נפרד עם <strong>פרטי הכניסה</strong>. אם לא קיבלתם — בדקו בספאם, או השיבו למייל הזה.</p><div class="email-box"><div class="email-box-title">איך ניגשים למשימה?</div><div class="email-steps"><div class="email-step"><strong>1.</strong> היכנסו למערכת עם פרטי הכניסה שקיבלתם.</div><div class="email-step"><strong>2.</strong> היכנסו לקורס <strong>״הכשרת קיץ 2026״</strong>.</div><div class="email-step"><strong>3.</strong> פתחו את היחידה <strong>״היכרות״</strong> ועקבו אחר ההוראות.</div></div></div><div class="email-hl"><strong style="color:#0E7C7B;">כדאי להזדרז:</strong> תינתן עדיפות למגישים מוקדם.</div><div class="email-rm"><div class="email-rm-title">הדרך להכשרה</div><div class="email-steps"><div class="email-step"><strong>①</strong> הגשת משימת הפתיחה בזמן.</div><div class="email-step"><strong>②</strong> שיחה אישית עם הצוות הפדגוגי.</div><div class="email-step"><strong>③</strong> הסדרת ההשתתפות.</div></div><div class="email-rm-note">השלמת שלושת השלבים תקבע את ההשתתפות הסופית.</div></div><p class="email-sig">בהצלחה!<br>צוות שפה אחת</p>`},
+    yes:{subject:"הכשרת מסוגלות 2026 – יצאתם לדרך, הנה השלב הראשון",body:`<p>שלום,</p><p>תודה שנרשמתם! השלב הראשון הוא משימת פתיחה קצרה במערכת <strong style="color:#0E7C7B;">Canbee</strong>.</p><p>שלחנו מייל נפרד עם <strong>פרטי הכניסה</strong>. אם לא קיבלתם — בדקו בספאם, או השיבו למייל הזה.</p><div class="email-box"><div class="email-box-title">איך ניגשים למשימה?</div><div class="email-steps"><div class="email-step"><strong>1.</strong> היכנסו למערכת עם פרטי הכניסה שקיבלתם.</div><div class="email-step"><strong>2.</strong> היכנסו לקורס <strong>״הכשרת קיץ 2026״</strong>.</div><div class="email-step"><strong>3.</strong> פתחו את היחידה <strong>״היכרות״</strong> ועקבו אחר ההוראות.</div></div></div><div class="email-hl"><strong style="color:#0E7C7B;">כדאי להזדרז:</strong> תינתן עדיפות למגישים מוקדם.</div><p class="email-sig">בהצלחה!<br>צוות שפה אחת ו- Do.ability</p>`},
     no:{subject:"עדכון לגבי מועמדותכם – הכשרת מנחים",body:`<p>שלום,</p><p>תודה לך על מטלת ההשתלבות ששלחת! צפינו בעניין רב. בשלב זה אנחנו מתעדפים מועמדים שיוכלו להשתלב גם בפיתוח תוכן.</p><p>נשמח לעדכן אותך לגבי הכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות ההכשרה ושפה אחת</p>`},
     reminders:[
       {tag:"info",label:"תזכורת 1 – יום לאחר מייל המשימה",subject:"תזכורת: משימת ההשתלבות | קיץ 2026",body:`<p>שלום רב,</p><p>בימים האחרונים שלחנו מייל עם הנחיות לביצוע משימה באתר Canbee. אם לא קיבלתם — בדקו בספאם.</p><p>המשימה יש להגיש עד <strong>14.6.26</strong>.</p><p class="email-sig">בברכה,<br>צוות שפה אחת</p>`},
@@ -176,189 +131,190 @@ const stages=[
       {tag:"urgent",label:"ביום האחרון – 14.6",subject:"הזדמנות אחרונה – המשימה נסגרת היום",body:`<p>שלום רב,</p><p>היום <strong>14.6.26</strong> הוא המועד האחרון. מי שלא יגיש לא יוכל להמשיך בתהליך.</p><p class="email-sig">בברכה,<br>צוות שפה אחת</p>`}
     ]},
   {num:3,title:"זימון לראיון",desc:"32 הגישו מטלה · 22 זומנו · 8 לא מתאימים, 2 לבדיקה",tabs:['yes','no'],
-    yes:{subject:"השתבצות לראיון עם צוות ההכשרה",body:`<p>שלום רב,</p><p>שמחים מאוד על הצטרפותך לתהליך ההרשמה לקורס הכשרת מנחים בגישת המסוגלות.</p><p>נהנינו לצפות בסרטון שלך, ומצפים לפגוש אותך באופן אישי.</p><div class="email-hl">אנא בחר/י מועד שנוח לך לראיון בקישור הבא:<br><br>👉 <a href="https://calendly.com/do-ability-beelango/meet-with-me" style="color:#0E7C7B;font-weight:600;">https://calendly.com/do-ability-beelango/meet-with-me</a></div><p>לכל שאלה: 📧 <strong style="color:#0E7C7B;">can_do@safa1.co.il</strong></p><p class="email-sig">בברכה,<br>צוות שפה 1</p>`},
+    yes:{subject:"השתבצות לראיון עם צוות ההכשרה",body:`<p>שלום רב,</p><p>שמחים מאוד על הצטרפותך לתהליך ההרשמה לקורס הכשרת מנחים בגישת המסוגלות.</p><p>נהנינו לצפות בסרטון שלך, ומצפים לפגוש אותך באופן אישי.</p><div class="email-hl">אנא בחר/י מועד שנוח לך לראיון בקישור הבא:<br><br><a href="https://calendly.com/do-ability-beelango/meet-with-me" style="color:#0E7C7B;font-weight:600;">https://calendly.com/do-ability-beelango/meet-with-me</a></div><p>לכל שאלה: <strong style="color:#0E7C7B;">can_do@safa1.co.il</strong></p><p class="email-sig">בברכה,<br>צוות שפה 1 ו- Do.ability</p>`},
     no:{subject:"עדכון לגבי מועמדותכם – הכשרת מנחים",body:`<p>שלום,</p><p>תודה לך על מטלת ההשתלבות ששלחת! צפינו בעניין רב. בשלב זה אנחנו מתעדפים מועמדים שיוכלו להשתלב גם בפיתוח תוכן.</p><p>נשמח לעדכן אותך לגבי הכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות ההכשרה ושפה אחת</p>`},
     reminders:null},
   {num:4,title:"לאחר הראיון",desc:"9 ראיונות בוצעו · 6 עברו בהצלחה, 3 לא מתאימים",tabs:['yes','no'],
     yes:{subject:"הכשרת מסוגלות 2026 – הזמנה רשמית להצטרף להכשרה",body:`<p>שלום רב,</p><p>שמחנו להיפגש לשיחה אישית ורצינו לומר תודה רבה על ההשקעה שלכם.</p><p>אנחנו מזמינים אתכם להצטרף להכשרה, ומצפים לעבודתנו המשותפת!</p><div class="email-hl">לתשומת לבכם: ההכשרה מסובסדת על ידי משרד העבודה, ובהתאם נדרשים דמי השתתפות סמליים בלבד.<br><br>נודה לכם על התחייבות למסגרת ההכשרה: זמינות, מחויבות מלאה לדרישות ההכשרה, והסדרת התשלום באמצעות הטופס המצורף.<br><br><a href="https://app.icount.co.il/m/f6d52/c1134cp35u6a2e756e6" class="pay-btn">להסדרת התשלום</a></div><div class="email-box"><div class="email-box-title">היקף העבודה (כ-100 שעות)</div><div class="email-steps"><div class="email-step"><strong>①</strong> משימות הכנה טרם ההכשרה</div><div class="email-step"><strong>②</strong> משימות יישום לכל אורך התהליך</div><div class="email-step"><strong>③</strong> השתתפות ב-8 ימי למידה מרוכזים בתל אביב</div><div class="email-step"><strong>④</strong> התנסות מעשית בתוכנית לבחירתכם (אוגוסט–ספטמבר)</div><div class="email-step"><strong>⑤</strong> הצגת תיק עבודות וקבלת תעודת סיום מוכרת (ספטמבר)</div></div></div><div class="email-rm"><div class="email-rm-title">תאריכי המפגשים</div><div class="dates-grid"><div class="date-item"><strong>1.</strong> יום א׳ 19.7</div><div class="date-item"><strong>5.</strong> יום א׳ 26.7</div><div class="date-item"><strong>2.</strong> יום ב׳ 20.7</div><div class="date-item"><strong>6.</strong> יום ב׳ 27.7</div><div class="date-item"><strong>3.</strong> יום ג׳ 21.7</div><div class="date-item"><strong>7.</strong> יום ג׳ 28.7</div><div class="date-item"><strong>4.</strong> יום ד׳ 22.7</div><div class="date-item"><strong>8.</strong> יום ד׳ 29.7</div></div><div class="dates-note">שעות המפגשים: 9:30–14:00 (נא להגיע מוקדם).</div></div><div class="email-box"><div class="email-box-title">מיקום המפגשים</div><p style="margin:0;font-size:14px;color:#1f2937;">מכון מופ"ת, רח' שושנה פרסיץ 13, ת"א &nbsp;(<a href="https://maps.app.goo.gl/tB2cUmx9wVGyLRiq9" style="color:#0E7C7B;font-weight:600;">google maps</a>) (<a href="https://www.waze.com/live-map/directions" style="color:#0E7C7B;font-weight:600;">waze</a>)</p><p style="margin:6px 0 0;font-size:13px;color:#6b7280;">חנייה חינם במקום, נגישות גבוהה בתחבורה ציבורית.</p></div><p>לכל שאלה: <a href="mailto:can_do@safa1.co.il" style="color:#0E7C7B;font-weight:600;">can_do@safa1.co.il</a></p><p class="email-sig">מתרגשים ושמחים לצאת לדרך,<br>צוות שפה אחת ו-Do.ability</p>`},
-    no:{subject:"עדכון לגבי מועמדותכם – הכשרת מנחים",body:`<p>שלום רב,</p><p>תודה רבה על הזמן שהקדשת לסרטון ולראיון, שמחנו להכיר.</p><p>בשלב זה אנחנו מתעדפים מועמדים שיוכלו להשתלב גם בפיתוח תוכן.</p><p>נשמח לעדכן אותך לגבי הכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות ההכשרה ושפה אחת</p>`},
+    no:{subject:"עדכון לגבי מועמדותכם – הכשרת מנחים",body:`<p>שלום רב,</p><p>תודה רבה על הזמן שהקדשת לתהליך ההיכרות. שמחנו להכיר ולשמוע על ניסיונך.</p><p>לאחר בחינת ההתאמה לצורכי התכנית בשלב הנוכחי, החלטנו שלא להתקדם עם מועמדותך להכשרה הקרובה.</p><p>נשמח לשמור את פרטיך ולעדכן אותך בנוגע להזדמנויות ולהכשרות עתידיות.</p><p class="email-sig">בברכה,<br>צוות שפה אחת ו- Do.ability</p>`},
     reminders:null},
   {num:5,title:"לאחר התשלום",desc:"אישור ופרטי הכשרה מלאים למשתתפים ששילמו",tabs:['yes'],
-    yes:{subject:"התשלום הוסדר – כיף שנרשמת!",body:`<p>שלום רב,</p><p>התשלום הוסדר, כיף שנרשמת! אנחנו שמחים מאוד שאת/ה מצטרף/ת אלינו לתכנית הכשרת המורים בשיטת המסוגלות של Do.ability ו-שפה1.</p><div class="email-hl"><div style="margin-bottom:8px;">📅 <strong>תאריכי המפגשים:</strong> 19–22.7 ו-26–29.7 (ימים א׳–ד׳)</div><div style="margin-bottom:8px;">🕘 <strong>שעות:</strong> 9:30–14:00 (נא להגיע מוקדם)</div><div>📍 <strong>מיקום:</strong> מכון מופ"ת, רח׳ שושנה פרסיץ 13, תל אביב</div></div><p>בימים הקרובים נחזור אליכם עם הנחיות נוספות כיצד להתכונן לקורס.</p><p class="email-sig">מחכים לראותך,<br>צוות תכנית ההכשרה</p>`},
+    yes:{subject:"התשלום הוסדר – כיף שנרשמת!",body:`<p>שלום רב,</p><p>התשלום הוסדר, כיף שנרשמת! אנחנו שמחים מאוד שאת/ה מצטרף/ת אלינו לתכנית הכשרת המורים בגישת המסוגלות של Do.ability ו-שפה1.</p><div class="email-hl"><div style="margin-bottom:8px;">📅 <strong>תאריכי המפגשים:</strong> 19–22.7 ו-26–29.7 (ימים א׳–ד׳)</div><div style="margin-bottom:8px;">🕘 <strong>שעות:</strong> 9:30–14:00 (נא להגיע מוקדם)</div><div>📍 <strong>מיקום:</strong> מכון מופ"ת, רח׳ שושנה פרסיץ 13, תל אביב</div></div><p>בימים הקרובים נחזור אליכם עם הנחיות נוספות כיצד להתכונן לקורס.</p><p class="email-sig">מחכים לראותך,<br>צוות תכנית ההכשרה</p>`},
     reminders:null}
 ];
 
-function getStatus(si,t){
-  const k=si+'-'+t;
-  if(approvals[k]) return 'approved';
-  if(comments[k]&&comments[k].trim()) return 'comment';
-  return 'pending';
-}
+// ── Global action functions (called from onclick) ──
+window.goDashboard = function(){ _state.view='dashboard'; _state.editingKey=null; render(); };
+window.goStage = function(si,t){ _state.current=si; _state.activeTab=t||''; _state.editingKey=null; _state.view='stage'; render(); };
+window.setTab = function(t){ _state.activeTab=t; _state.editingKey=null; render(); };
+window.toggleDash = function(si){ _state.dashOpen[si]=!_state.dashOpen[si]; render(); };
+window.toggleReminder = function(rKey){ _state.openReminders[rKey]=!_state.openReminders[rKey]; render(); };
+window.navPrev = function(){ if(_state.current>0){_state.current--;_state.activeTab='';_state.editingKey=null;render();}else{_state.view='dashboard';render();} };
+window.navNext = function(){ if(_state.current<_stages.length-1){_state.current++;_state.activeTab='';_state.editingKey=null;render();}else{_state.view='dashboard';render();} };
 
-function getAllEmailKeys(){
-  const keys=[];
-  stages.forEach((s,si)=>s.tabs.forEach(t=>keys.push({si,t})));
-  return keys;
-}
-
-function renderDashboard(){
-  const all=getAllEmailKeys();
-  const approved=all.filter(({si,t})=>getStatus(si,t)==='approved').length;
-  const withComment=all.filter(({si,t})=>getStatus(si,t)==='comment').length;
-  const pending=all.filter(({si,t})=>getStatus(si,t)==='pending').length;
-
-  let h=`<div class="dash-title">סטטוס אישורי מיילים – הכשרת מסוגלות 2026</div>
-  <div class="dash-sub">לחצי על שלב לפירוט · לחצי "עבור למייל" לעריכה ואישור</div>
-  <div class="dash-stats">
-    <div class="stat-card sc-green"><div class="stat-num">${approved}</div><div class="stat-lbl">אושרו ✓</div></div>
-    <div class="stat-card sc-amber"><div class="stat-num">${withComment}</div><div class="stat-lbl">עם הערות 💬</div></div>
-    <div class="stat-card sc-red"><div class="stat-num">${pending}</div><div class="stat-lbl">ממתינים ⏳</div></div>
-  </div>
-  <div class="dash-list">`;
-
-  stages.forEach((s,si)=>{
-    const allApproved=s.tabs.every(t=>getStatus(si,t)==='approved');
-    const anyComment=s.tabs.some(t=>getStatus(si,t)==='comment');
-    h+=`<div class="dash-card">
-      <div class="dash-card-hdr" onclick="dashOpen[${si}]=!dashOpen[${si}];document.getElementById('db${si}').className='dash-card-body'+(dashOpen[${si}]?' open':'')">
-        <div class="dash-card-left">
-          <div class="dash-num">${s.num}</div>
-          <div class="dash-name">${s.title}</div>
-        </div>
-        <div class="pills">`;
-    s.tabs.forEach(t=>{
-      const st=getStatus(si,t);
-      const lbl={yes:'מתקדם',no:'לא מתקדם',auto:'אוטומטי'}[t];
-      if(st==='approved') h+=`<span class="pill pill-ok">✓ ${lbl}</span>`;
-      else if(st==='comment') h+=`<span class="pill pill-cmt">💬 ${lbl}</span>`;
-      else h+=`<span class="pill pill-pend">${lbl}</span>`;
-    });
-    h+=`</div></div>
-      <div class="dash-card-body" id="db${si}">`;
-    s.tabs.forEach(t=>{
-      const st=getStatus(si,t);
-      const lbl={yes:'מייל מתקדם',no:'מייל לא מתקדם',auto:'מייל אוטומטי'}[t];
-      const stTxt=st==='approved'?'✓ אושר על ידי חיה':st==='comment'?'💬 יש הערה':'⏳ ממתין לאישור';
-      const stColor=st==='approved'?'#065f46':st==='comment'?'#92400e':'#9ca3af';
-      h+=`<div class="dash-row"><span>${lbl} — <span style="color:${stColor}">${stTxt}</span></span><button class="dash-go" onclick="current=${si};activeTab='${t}';view='stage';render()">עבור למייל</button></div>`;
-    });
-    h+=`</div></div>`;
-  });
-
-  if(pending===0){
-    const hasComments=Object.values(comments).some(v=>v&&v.trim());
-    h+=`<button class="dash-done" onclick="sendSummary()"><i class="ti ti-send"></i> ${hasComments?'שלח סיכום הערות':'כל המיילים אושרו — שלח אישור'}</button>`;
-  } else {
-    h+=`<div class="dash-pending-note">נותרו ${pending} מיילים שטרם אושרו או הוענות עליהם</div>`;
-  }
-
-  h+=`</div>`;
-  document.getElementById('app').innerHTML=h;
-}
-
-function approveEmail(key){approvals[key]=true;saveToFirebase();render();}
-function unapproveEmail(key){delete approvals[key];saveToFirebase();render();}
-
-function saveComment(key,val){
-  comments[key]=val;
-  saveToFirebase();
-  const sk=key.replace(/[^a-z0-9]/gi,'_');
-  const el=document.getElementById('saved-'+sk);
-  if(el){el.style.display='flex';setTimeout(()=>{if(el)el.style.display='none';},2000);}
+window.startEdit = function(key){
+  _state.editingKey = key;
   render();
+  setTimeout(()=>{ const el=document.getElementById('editor-'+key); if(el) el.focus(); },50);
+};
+window.cancelEdit = function(){ _state.editingKey=null; render(); };
+window.saveEdit = function(key){
+  const el = document.getElementById('editor-'+key);
+  if(el){ _state.edits[key]=el.value; saveToFirebase(); }
+  _state.editingKey=null;
+  render();
+};
+window.resetEdit = function(key){
+  if(confirm('לאפס את המייל לגרסה המקורית?')){ delete _state.edits[key]; saveToFirebase(); render(); }
+};
+window.toggleCheck = function(key, field){
+  if(!_state.checks[key]) _state.checks[key]={brevo:false,auto:false};
+  _state.checks[key][field]=!_state.checks[key][field];
+  saveToFirebase();
+  render();
+};
+window.showHTML = function(key){
+  const parts=key.split('-');
+  const si=parseInt(parts[0]);
+  const t=parts.slice(1).join('-');
+  const s=_stages[si];
+  let mail=null;
+  if(t.startsWith('r')){ mail=s.reminders[parseInt(t.slice(1))]; }
+  else if(t==='auto') mail=s.auto;
+  else if(t==='yes') mail=s.yes;
+  else if(t==='no') mail=s.no;
+  if(!mail) return;
+  const body = _state.edits[key]!==undefined ? _state.edits[key] : mail.body;
+  const fullHTML=`<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="utf-8"><title>${mail.subject}</title><style>body{font-family:Arial,sans-serif;max-width:600px;margin:40px auto;direction:rtl;text-align:right;font-size:14px;line-height:1.8;color:#1f2937;}p,div,span,td,th{direction:rtl;text-align:right;}.email-hl{background:#eef6f6;border-right:3px solid #0E7C7B;border-left:none;padding:12px 14px;margin:12px 0;direction:rtl;text-align:right;}.email-box{background:#f0f9f9;border-radius:8px;padding:14px 16px;margin:12px 0;direction:rtl;text-align:right;}.email-box-title{color:#0E7C7B;font-weight:600;margin-bottom:8px;direction:rtl;text-align:right;}.email-rm{border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;margin:12px 0;direction:rtl;text-align:right;}.email-sig{color:#6b7280;font-size:13px;direction:rtl;text-align:right;}.pay-btn{display:inline-block;padding:9px 20px;background:#0E7C7B;color:#fff;font-weight:600;text-decoration:none;border-radius:8px;}.dates-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 14px;direction:rtl;}.date-item{font-size:13px;color:#6b7280;direction:rtl;text-align:right;}.dates-note{font-size:12px;color:#9ca3af;border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;direction:rtl;text-align:right;}p{margin-bottom:14px;direction:rtl;text-align:right;}</style></head><body dir="rtl" style="direction:rtl;text-align:right;">${body}</body></html>`;
+  const escaped = fullHTML.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:#0008;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;';
+  modal.innerHTML=`<div style="background:#1e1e2e;border-radius:12px;width:100%;max-width:660px;max-height:85vh;display:flex;flex-direction:column;overflow:hidden;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#2a2a3e;border-radius:12px 12px 0 0;">
+      <span style="color:#a0aec0;font-size:12px;font-family:monospace;">${mail.subject}</span>
+      <button onclick="this.closest('div[style*=fixed]').remove()" style="background:none;border:none;color:#a0aec0;font-size:18px;cursor:pointer;padding:2px 6px;">✕</button>
+    </div>
+    <pre style="margin:0;padding:16px;overflow:auto;font-size:12px;line-height:1.7;color:#e2e8f0;font-family:monospace;white-space:pre-wrap;word-break:break-word;">${escaped}</pre>
+    <div style="padding:10px 16px;background:#2a2a3e;border-radius:0 0 12px 12px;display:flex;justify-content:flex-end;">
+      <button id="copy-btn-${key.replace(/[^a-z0-9]/gi,'_')}" onclick="navigator.clipboard.writeText(document.getElementById('copy-btn-${key.replace(/[^a-z0-9]/gi,'_')}')._html).then(()=>{this.textContent='הועתק ✓';setTimeout(()=>this.textContent='העתק',1500)})" style="padding:6px 14px;border-radius:7px;background:#0E7C7B;color:#fff;font-size:12px;border:none;cursor:pointer;">העתק</button>
+    </div>
+  </div>`;
+  modal.addEventListener('click',e=>{ if(e.target===modal) modal.remove(); });
+  document.body.appendChild(modal);
+  document.getElementById('copy-btn-'+key.replace(/[^a-z0-9]/gi,'_'))._html = fullHTML;
+};
+
+window.doDownload = function(key){
+  const parts=key.split('-');
+  const si=parseInt(parts[0]);
+  const t=parts.slice(1).join('-');
+  const s=_stages[si];
+  let mail=null;
+  if(t.startsWith('r')){ mail=s.reminders[parseInt(t.slice(1))]; }
+  else if(t==='auto') mail=s.auto;
+  else if(t==='yes') mail=s.yes;
+  else if(t==='no') mail=s.no;
+  if(!mail) return;
+  const body = _state.edits[key]!==undefined ? _state.edits[key] : mail.body;
+  const html=`<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="utf-8"><title>${mail.subject}</title><style>body{font-family:Arial,sans-serif;max-width:600px;margin:40px auto;direction:rtl;text-align:right;font-size:14px;line-height:1.8;color:#1f2937;}p,div,span,td,th{direction:rtl;text-align:right;}.email-hl{background:#eef6f6;border-right:3px solid #0E7C7B;border-left:none;padding:12px 14px;margin:12px 0;direction:rtl;text-align:right;}.email-box{background:#f0f9f9;border-radius:8px;padding:14px 16px;margin:12px 0;direction:rtl;text-align:right;}.email-box-title{color:#0E7C7B;font-weight:600;margin-bottom:8px;direction:rtl;text-align:right;}.email-rm{border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;margin:12px 0;direction:rtl;text-align:right;}.email-sig{color:#6b7280;font-size:13px;direction:rtl;text-align:right;}.pay-btn{display:inline-block;padding:9px 20px;background:#0E7C7B;color:#fff;font-weight:600;text-decoration:none;border-radius:8px;}.dates-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 14px;direction:rtl;}.date-item{font-size:13px;color:#6b7280;direction:rtl;text-align:right;}.dates-note{font-size:12px;color:#9ca3af;border-top:1px solid #e5e7eb;padding-top:8px;margin-top:8px;direction:rtl;text-align:right;}p{margin-bottom:14px;direction:rtl;text-align:right;}</style></head><body dir="rtl" style="direction:rtl;text-align:right;">${body}</body></html>`;
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=mail.subject.replace(/[^\u05D0-\u05FAa-z0-9\s]/gi,'').trim().replace(/\s+/g,'-').slice(0,60)+'.html';
+  a.click();
+};
+
+function saveToFirebase(){ window._fbSave && window._fbSave(); }
+
+// ── Render helpers ──
+function mailBody(key, mail){
+  return _state.edits[key]!==undefined ? _state.edits[key] : mail.body;
 }
+function getChecks(key){ return _state.checks[key]||{brevo:false,auto:false}; }
 
-function showWarn(id){
-  const w=document.getElementById(id);
-  if(w){w.style.display='block';setTimeout(()=>{if(w)w.style.display='none';},3000);}
-}
+function actionBlock(key, mail){
+  const isEditing = _state.editingKey===key;
+  const hasEdit = _state.edits[key]!==undefined;
+  const c = getChecks(key);
+  const currentBody = mailBody(key, mail);
 
-function checkAndGoNext(){
-  const k=commentKey();
-  if(!approvals[k]&&(!comments[k]||!comments[k].trim())){
-    showWarn('warn-'+k.replace(/[^a-z0-9]/gi,'_'));
-    return;
-  }
-  if(current<stages.length-1){current++;activeTab='';render();}
-  else{view='dashboard';render();}
-}
-
-function sendSummary(){
-  const lines=[];
-  stages.forEach((s,si)=>{
-    s.tabs.forEach(t=>{
-      const k=si+'-'+t;
-      if(comments[k]&&comments[k].trim()){
-        const lbl={yes:'מתקדם',no:'לא מתקדם',auto:'אוטומטי'}[t];
-        lines.push('שלב '+s.num+' – '+s.title+' ('+lbl+'):\n'+comments[k].trim());
-      }
-    });
-  });
-  alert(lines.length?'סיכום הערות חיה:\n\n'+lines.join('\n\n'):'כל המיילים אושרו ללא הערות על ידי חיה.');
-}
-
-function actionBlock(key){
-  const sk=key.replace(/[^a-z0-9]/gi,'_');
-  const isApproved=!!approvals[key];
-  const val=comments[key]||'';
-  const hasVal=val.trim().length>0;
-
-  let h=`<div class="action-area">
-    <div class="action-row">`;
-  if(isApproved){
-    h+=`<button class="approve-btn approved" disabled><i class="ti ti-check"></i> אושר על ידי חיה</button>
-        <button class="unapprove-btn" onclick="unapproveEmail('${key}')">בטל אישור</button>`;
+  let h=`<div class="action-area"><div class="action-toolbar">`;
+  if(isEditing){
+    h+=`<button class="tool-btn save-btn" onclick="saveEdit('${key}')"><i class="ti ti-device-floppy"></i> שמור</button>`;
+    h+=`<button class="tool-btn" onclick="cancelEdit()"><i class="ti ti-x"></i> בטל</button>`;
   } else {
-    h+=`<button class="approve-btn" onclick="approveEmail('${key}')"><i class="ti ti-check"></i> אישור של חיה</button>
-        <span class="warn-msg" id="warn-${sk}">יש ללחוץ אישור, או להוסיף הערה</span>`;
+    h+=`<button class="tool-btn" onclick="startEdit('${key}')"><i class="ti ti-pencil"></i> ערוך מייל</button>`;
+    h+=`<button class="tool-btn" onclick="doDownload('${key}')"><i class="ti ti-download"></i> הורד HTML</button>`;
+    h+=`<button class="tool-btn" onclick="showHTML('${key}')"><i class="ti ti-code"></i> הצג קוד HTML</button>`;
+    if(hasEdit) h+=`<button class="tool-btn reset-btn" onclick="resetEdit('${key}')"><i class="ti ti-rotate"></i> אפס</button>`;
   }
   h+=`</div>`;
-
-  if(!isApproved){
-    h+=`<div class="comment-box">
-      <div class="comment-hdr">
-        <i class="ti ti-message-circle"></i>
-        <span class="comment-hdr-lbl">הערות למנהלת</span>
-        ${hasVal?'<span class="comment-saved-badge"><i class="ti ti-check" style="font-size:10px"></i> נשמר</span>':''}
-      </div>
-      <textarea class="comment-ta" id="ta-${sk}" placeholder="הערות, שינויים, תיקונים..." oninput="comments['${key}']=this.value;document.getElementById('cc-${sk}').textContent=this.value.length+' תווים';">${val}</textarea>
-      <div class="comment-ft">
-        <span class="comment-cnt" id="cc-${sk}">${val.length} תווים</span>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <span class="comment-saved-note" id="saved-${sk}"><i class="ti ti-check" style="font-size:12px;color:#065f46"></i> נשמר</span>
-          <button class="comment-save-btn" onclick="saveComment('${key}',document.getElementById('ta-${sk}').value)">שמור הערה</button>
-        </div>
-      </div>
-    </div>`;
+  h+=`<div class="checks-row">
+    <label class="check-label"><input type="checkbox" ${c.brevo?'checked':''} onchange="toggleCheck('${key}','brevo')"> נמצא ב-BREVO</label>
+    <label class="check-label"><input type="checkbox" ${c.auto?'checked':''} onchange="toggleCheck('${key}','auto')"> יש אוטומציה</label>
+  </div>`;
+  if(isEditing){
+    h+=`<textarea class="email-editor" id="editor-${key}">${currentBody}</textarea>`;
   }
   h+=`</div>`;
   return h;
 }
 
-function commentKey(){return current+'-'+activeTab;}
-function getDefaultTab(s){return s.tabs[0];}
-
-function renderStage(){
-  const s=stages[current];
-  if(!activeTab||!s.tabs.includes(activeTab)) activeTab=getDefaultTab(s);
-
-  const totalC=Object.values(comments).filter(v=>v&&v.trim()).length;
-
-  let h=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
-    <button class="home-btn" onclick="view='dashboard';render()"><i class="ti ti-home"></i> דשבורד</button>
-    ${totalC>0?`<button onclick="sendSummary()" style="padding:6px 13px;border-radius:8px;background:#92400e;color:#fff;font-size:12px;border:none;cursor:pointer;">סיכום הערות (${totalC}) ↗</button>`:''}
+function mailCard(key, mail){
+  return `<div class="email-card">
+    <div class="email-header">
+      <div class="email-from">מאת: צוות שפה אחת ו-Do.ability &lt;can_do@safa1.co.il&gt;</div>
+      <div class="email-subject">נושא: ${mail.subject}</div>
+    </div>
+    <div class="email-body">${mailBody(key,mail)}</div>
   </div>`;
+}
 
-  h+=`<div class="stage-nav">`;
-  stages.forEach((st,i)=>{
-    const allOk=st.tabs.every(t=>approvals[i+'-'+t]);
-    const anyCmt=st.tabs.some(t=>comments[i+'-'+t]&&comments[i+'-'+t].trim());
-    const icon=allOk?' ✓':anyCmt?' 💬':'';
-    h+=`<button class="stage-btn${i===current?' active':''}" onclick="current=${i};activeTab='';render()">${st.num}. ${st.title}${icon}</button>`;
+function renderDashboard(){
+  let h=`<div class="dash-title">Workflow הכשרת מסוגלות 2026</div>
+  <div class="dash-sub">לחצו על שלב לפירוט · לחצו "עבור למייל" לעריכה</div>
+  <div class="dash-list">`;
+  _stages.forEach((s,si)=>{
+    h+=`<div class="dash-card">
+      <div class="dash-card-hdr" onclick="toggleDash(${si})">
+        <div class="dash-card-left"><div class="dash-num">${s.num}</div><div class="dash-name">${s.title}</div></div>
+        <div class="pills">`;
+    s.tabs.forEach(t=>{
+      const c=getChecks(si+'-'+t);
+      const lbl={yes:'מתקדם',no:'לא מתקדם',auto:'אוטומטי'}[t];
+      if(c.brevo&&c.auto) h+=`<span class="pill pill-full">✓ ${lbl}</span>`;
+      else if(c.brevo||c.auto) h+=`<span class="pill pill-part">~ ${lbl}</span>`;
+      else h+=`<span class="pill pill-pend">${lbl}</span>`;
+    });
+    const open=!!_state.dashOpen[si];
+    h+=`</div></div>
+      <div class="dash-card-body${open?' open':''}" id="db${si}">`;
+    s.tabs.forEach(t=>{
+      const c=getChecks(si+'-'+t);
+      const lbl={yes:'מייל מתקדם',no:'מייל לא מתקדם',auto:'מייל אוטומטי'}[t];
+      const parts=[]; if(c.brevo) parts.push('BREVO ✓'); if(c.auto) parts.push('אוטומציה ✓');
+      const stTxt=parts.length?parts.join(' · '):'טרם הוגדר';
+      const stColor=parts.length?'#065f46':'#9ca3af';
+      h+=`<div class="dash-row"><span>${lbl} — <span style="color:${stColor}">${stTxt}</span></span><button class="dash-go" onclick="goStage(${si},'${t}')">עבור למייל</button></div>`;
+    });
+    h+=`</div></div>`;
   });
   h+=`</div>`;
+  document.getElementById('app').innerHTML=h;
+}
 
-  h+=`<div class="progress-bar"><div class="progress-fill" style="width:${(current+1)/stages.length*100}%"></div></div>`;
+function renderStage(){
+  const st=_state;
+  const s=_stages[st.current];
+  if(!st.activeTab||!s.tabs.includes(st.activeTab)) st.activeTab=s.tabs[0];
+
+  let h=`<div style="margin-bottom:1.25rem;"><button class="home-btn" onclick="goDashboard()"><i class="ti ti-home"></i> דשבורד</button></div>`;
+  h+=`<div class="stage-nav">`;
+  _stages.forEach((sg,i)=>{
+    h+=`<button class="stage-btn${i===st.current?' active':''}" onclick="goStage(${i})">${sg.num}. ${sg.title}</button>`;
+  });
+  h+=`</div>`;
+  h+=`<div class="progress-bar"><div class="progress-fill" style="width:${(st.current+1)/_stages.length*100}%"></div></div>`;
   h+=`<div class="stage-header"><div class="stage-badge">${s.num}</div><div class="stage-title">${s.title}</div></div>`;
   h+=`<div class="stage-desc">${s.desc}</div>`;
 
@@ -367,37 +323,36 @@ function renderStage(){
     s.tabs.forEach(t=>{
       const labels={yes:'מתקדם ✓',no:'לא מתקדם ✗',auto:'מייל אוטומטי'};
       const dots={yes:'dot-yes',no:'dot-no',auto:'dot-auto'};
-      h+=`<button class="tab${activeTab===t?' active':''}" onclick="activeTab='${t}';render()"><span class="tab-dot ${dots[t]}"></span>${labels[t]}</button>`;
+      h+=`<button class="tab${st.activeTab===t?' active':''}" onclick="setTab('${t}')"><span class="tab-dot ${dots[t]}"></span>${labels[t]}</button>`;
     });
     h+=`</div>`;
   }
 
   let mail=null;
-  if(activeTab==='auto'&&s.auto){h+=`<div class="auto-badge"><i class="ti ti-bolt"></i> נשלח אוטומטית עם הרישום</div>`;mail=s.auto;}
-  else if(activeTab==='yes') mail=s.yes;
-  else if(activeTab==='no') mail=s.no;
+  if(st.activeTab==='auto'&&s.auto){h+=`<div class="auto-badge"><i class="ti ti-bolt"></i> נשלח אוטומטית עם הרישום</div>`;mail=s.auto;}
+  else if(st.activeTab==='yes') mail=s.yes;
+  else if(st.activeTab==='no') mail=s.no;
 
   if(mail){
-    h+=`<div class="email-card"><div class="email-header"><div class="email-from">מאת: צוות שפה אחת ו-Do.ability &lt;can_do@safa1.co.il&gt;</div><div class="email-subject">נושא: ${mail.subject}</div></div><div class="email-body">${mail.body}</div></div>`;
-    h+=actionBlock(commentKey());
+    const key=st.current+'-'+st.activeTab;
+    h+=mailCard(key,mail);
+    h+=actionBlock(key,mail);
   }
 
-  if(s.reminders&&activeTab==='yes'){
+  if(s.reminders&&st.activeTab==='yes'){
     h+=`<div style="margin-top:1.25rem;"><div style="font-size:13px;font-weight:600;color:#6b7280;margin-bottom:8px;">תזכורות (למי שטרם הגיש)</div><div class="reminder-list">`;
     s.reminders.forEach((r,i)=>{
-      const rKey=current+'-r'+i;
-      const isOpen=!!openReminders[rKey];
-      const rApproved=approvals[rKey];
-      const rComment=comments[rKey]&&comments[rKey].trim();
+      const rKey=st.current+'-r'+i;
+      const isOpen=!!st.openReminders[rKey];
       h+=`<div class="reminder-item">
-        <button class="reminder-toggle${isOpen?' open':''}" onclick="openReminders['${rKey}']=!openReminders['${rKey}'];render()">
-          <span><span class="rtag tag-${r.tag}">${r.tag==='urgent'?'דחוף':r.tag==='warn'?'אזהרה':'מידע'}</span>${r.label}${rApproved?' ✓':rComment?' 💬':''}</span>
+        <button class="reminder-toggle${isOpen?' open':''}" onclick="toggleReminder('${rKey}')">
+          <span><span class="rtag tag-${r.tag}">${r.tag==='urgent'?'דחוף':r.tag==='warn'?'אזהרה':'מידע'}</span>${r.label}</span>
           <i class="ti ti-chevron-down"></i>
         </button>
         <div class="reminder-body${isOpen?' show':''}">
           <div style="font-size:12px;color:#6b7280;margin-bottom:8px;font-weight:600;">נושא: ${r.subject}</div>
-          ${r.body}
-          ${actionBlock(rKey)}
+          ${mailCard(rKey,r)}
+          ${actionBlock(rKey,r)}
         </div>
       </div>`;
     });
@@ -405,31 +360,46 @@ function renderStage(){
   }
 
   h+=`<div class="nav-footer">
-    <button class="nav-btn" onclick="if(current>0){current--;activeTab='';render();}else{view='dashboard';render();}" ${current===0?'style="visibility:hidden"':''}><i class="ti ti-arrow-right"></i> הקודם</button>
-    <button class="nav-btn primary" onclick="checkAndGoNext()">${current===stages.length-1?'סיום וחזרה לדשבורד <i class=\"ti ti-home\"></i>':'הבא <i class=\"ti ti-arrow-left\"></i>'}</button>
+    <button class="nav-btn" onclick="navPrev()" ${st.current===0?'style="visibility:hidden"':''}><i class="ti ti-arrow-right"></i> הקודם</button>
+    <button class="nav-btn primary" onclick="navNext()">${st.current===_stages.length-1?'סיום וחזרה לדשבורד <i class="ti ti-home"></i>':'הבא <i class="ti ti-arrow-left"></i>'}</button>
   </div>`;
 
   document.getElementById('app').innerHTML=h;
 }
 
-function render(){
-  if(view==='dashboard') renderDashboard();
+window.render = function(){
+  if(_state.view==='dashboard') renderDashboard();
   else renderStage();
-}
-// Expose functions and state to global scope (needed for onclick handlers in module script)
-window.dashOpen = dashOpen;
-window.openReminders = openReminders;
-window.comments = comments;
-window.render = render;
-window.approveEmail = approveEmail;
-window.unapproveEmail = unapproveEmail;
-window.saveComment = saveComment;
-window.sendSummary = sendSummary;
-window.checkAndGoNext = checkAndGoNext;
-Object.defineProperty(window, 'current', { get: ()=>current, set: v=>{ current=v; } });
-Object.defineProperty(window, 'activeTab', { get: ()=>activeTab, set: v=>{ activeTab=v; } });
-Object.defineProperty(window, 'view', { get: ()=>view, set: v=>{ view=v; } });
+};
+
 render();
+</script>
+
+<!-- Firebase module: only handles DB sync -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+const app = initializeApp({ databaseURL: "https://can-do-workflow-default-rtdb.europe-west1.firebasedatabase.app/" });
+const db = getDatabase(app);
+const dataRef = ref(db, 'workflow');
+
+window._fbSave = function(){
+  set(dataRef, {
+    edits: {..._state.edits},
+    checks: {..._state.checks},
+    lastUpdated: new Date().toISOString()
+  });
+};
+
+onValue(dataRef, (snapshot) => {
+  const data = snapshot.val() || {};
+  Object.keys(_state.edits).forEach(k=>delete _state.edits[k]);
+  Object.keys(_state.checks).forEach(k=>delete _state.checks[k]);
+  if(data.edits) Object.assign(_state.edits, data.edits);
+  if(data.checks) Object.assign(_state.checks, data.checks);
+  render();
+});
 </script>
 </body>
 </html>
